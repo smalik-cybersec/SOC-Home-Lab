@@ -43,17 +43,50 @@ Worked through Splunk log analysis (TryHackMe SIEM room, Task 4) querying:
 ## Issues Encountered & Fixes
 
 | Issue | Fix |
-|---|---|
-| Network adapter conflicts when using a Jio 5G hotspot for internet | *[fill in exact fix]* |
-| ARM64 vs x64 ISO mismatch during VM setup | *[fill in exact fix]* |
-| Confusion between AD DS and AD CS during role installation | *[fill in exact fix]* |
-| Windows 10 **Home** can't join a domain | Rebuilt PC01 on Windows 10 **Pro** |
-| Splunk Universal Forwarder configuration issues | *[fill in exact fix]* |
+|-------|-----|
+| Network adapter conflicts with Jio 5G hotspot | Switched from Bridged to NAT mode for internet access and used Internal Network for inter-VM communication |
+| ARM64 vs x64 ISO mismatch | Downloaded incorrect ARM64 Windows ISO. Fixed by downloading correct x64 64-bit ISO from Microsoft official website |
+| AD DS vs AD CS confusion | Accidentally installed Certificate Services instead of Domain Services. Removed AD CS completely then correctly installed AD DS and promoted to Domain Controller |
+| Windows 10 Home cannot join domain | Rebuilt PC01 using Windows 10 Pro ISO as Home edition does not support Active Directory domain joining |
+| Splunk Universal Forwarder not sending logs | Manually created inputs.conf file with correct WinEventLog paths, verified port 9997 open on Splunk server, confirmed correct Ubuntu IP address and restarted forwarder service |
+
+---
 
 ## Lessons Learned
 
-*[2–4 sentences — what you'd do differently, what surprised you, what you understand now that you didn't at the start. This section is often what interviewers ask about directly, so it's worth writing carefully.]*
+Building this SOC home lab from scratch 
+taught me that real cybersecurity work 
+involves much more troubleshooting than 
+expected. Understanding WHY something 
+fails is more valuable than just fixing 
+it — the ARM64 vs x64 issue taught me 
+to always verify hardware compatibility 
+before downloading software.
 
+The biggest surprise was how powerful 
+Splunk is even in a home environment. 
+I expected basic logs but saw detailed 
+attack evidence including exact 
+timestamps, source IPs, targeted 
+accounts and failure reasons all 
+captured automatically through 
+EventCode 4625.
+
+If starting over I would take VM 
+snapshots before every major 
+configuration change. Several times 
+I rebuilt machines from scratch due 
+to misconfigurations. This taught me 
+the critical importance of change 
+management in real SOC environments.
+
+Most importantly this project changed 
+how I think about security. When I 
+simulated a brute force attack from 
+Kali Linux and immediately saw failed 
+login events in Splunk it clicked — 
+this is exactly what SOC analysts do 
+every day to protect organizations.
 ## Next Steps
 
 - [ ] Add more detection rules (e.g. suspicious PowerShell execution, lateral movement)
