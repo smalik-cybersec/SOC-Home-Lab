@@ -151,9 +151,9 @@ Each VM = A separate computer in each room
 3. Accepted license agreement
 4. Configured virtualization settings
 
-[Insert Screenshot: VMware Workstation Home Screen]
+<img width="1920" height="1020" alt="vmware_iR9x01c8R5" src="https://github.com/user-attachments/assets/6bc8495a-0266-4d92-a939-c63f3eb84d46" />
 
-[Insert Screenshot: All VMs Listed in VMware]
+<img width="240" height="852" alt="vmware_BnTZhdI15O" src="https://github.com/user-attachments/assets/f8a4dc90-c7f7-443d-8bab-51d947daa310" />
 
 ### Virtual Machine List
 
@@ -204,7 +204,7 @@ VMware Tools was installed on all Windows and Ubuntu VMs to enable:
 sudo apt-get install open-vm-tools-desktop -y
 ```
 
-[Insert Screenshot: VMware Tools Installation Complete]
+<img width="391" height="320" alt="RmCld84d1k" src="https://github.com/user-attachments/assets/7805b0c3-c190-4a24-8d22-3b182ce98536" />
 
 ---
 
@@ -241,7 +241,7 @@ https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022
 5. Set Administrator password: Admin@12345
 6. Installed VMware Guest Additions
 
-[Insert Screenshot: Windows Server 2022 Installation Screen]
+<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/13abb4b2-33a7-4795-bd5b-fccc5f8971f4" />
 
 [Insert Screenshot: DC01 Desktop After Installation]
 
