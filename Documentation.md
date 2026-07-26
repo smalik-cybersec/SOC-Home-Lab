@@ -243,7 +243,7 @@ https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022
 
 <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/13abb4b2-33a7-4795-bd5b-fccc5f8971f4" />
 
-[Insert Screenshot: DC01 Desktop After Installation]
+<img width="1920" height="1020" alt="vmware_XR4Ds8MGlP" src="https://github.com/user-attachments/assets/b8008dbf-12fa-45a6-bbc1-ce14519f377b" />
 
 ### Rename Server to DC01
 
@@ -283,14 +283,14 @@ other computers can always find them
 6. Enter values above
 7. Click OK
 
-[Insert Screenshot: DC01 Static IP Configuration]
+<img width="1668" height="876" alt="vmware_nkt5uQlQSO" src="https://github.com/user-attachments/assets/3c44623c-15cf-4f19-98ad-ad38539c12c1" />
 
 **Verification Command:**
 ```cmd
 ipconfig /all
 ```
 
-[Insert Screenshot: DC01 ipconfig showing 192.168.160.10]
+<img width="1668" height="876" alt="vmware_Jm3KMAMbpM" src="https://github.com/user-attachments/assets/dd314b12-6770-464b-ab9e-1929a63ab821" />
 
 ---
 
@@ -330,7 +330,7 @@ AD CS = Active Directory Certificate Services ❌ (not needed)
 These have similar names but completely different purposes!
 ```
 
-[Insert Screenshot: Server Manager Showing AD DS Installation]
+<img width="1920" height="1020" alt="vmware_jGhqXAD2ex" src="https://github.com/user-attachments/assets/a8960286-2f32-4835-8a29-8c8a14fa6442" />
 
 ### Promoting Server to Domain Controller
 
@@ -345,9 +345,9 @@ DSRM Password: Admin@12345
 Forest/Domain Functional Level: Default
 ```
 
-[Insert Screenshot: Domain Controller Promotion Wizard]
+<img width="1919" height="966" alt="image" src="https://github.com/user-attachments/assets/3e0623a0-0c69-4ad1-a3fd-ecc881938750" />
 
-[Insert Screenshot: Login Screen Showing SECURECORP\Administrator]
+<img width="1920" height="1020" alt="vmware_SzldCgOjDh" src="https://github.com/user-attachments/assets/934a7be5-f43c-4dec-8938-8d737fd55bcf" />
 
 ### Verification
 
@@ -363,7 +363,7 @@ dcdiag /summary
 ```
 Result: All tests passed ✅
 
-[Insert Screenshot: whoami showing securecorp\administrator]
+<img width="1920" height="1080" alt="UXxnxN8ZhX" src="https://github.com/user-attachments/assets/c61d255c-9020-4227-9cc0-6c2efcb33c60" />
 
 ### Server Manager After AD DS
 
@@ -374,7 +374,7 @@ After successful installation Server Manager shows:
 - Local Server ✅
 - All Servers ✅
 
-[Insert Screenshot: Server Manager Left Panel with AD DS and DNS]
+<img width="1920" height="1080" alt="MVdOgZE4ji" src="https://github.com/user-attachments/assets/f9e508cb-e195-455d-95a6-3439ce699b99" />
 
 ---
 
@@ -412,7 +412,7 @@ Name: securecorp.local
 Address: 192.168.160.10 ✅
 ```
 
-[Insert Screenshot: nslookup showing securecorp.local resolving correctly]
+<img width="1920" height="1080" alt="T5UJZIlqa5" src="https://github.com/user-attachments/assets/7213616c-2c0a-4cc2-a6c6-531cf3a572d6" />
 
 ### DHCP Server
 
@@ -453,15 +453,16 @@ DNS Server:    192.168.160.10
 Lease Duration: 8 days
 ```
 
-[Insert Screenshot: DHCP Manager Showing SecHomeLab_Scope]
+<img width="1668" height="876" alt="vmware_qkdUE3yfkL" src="https://github.com/user-attachments/assets/d28f06da-2954-406e-ac4c-cb10c9c23857" />
 
-[Insert Screenshot: DHCP and DNS Running in Server Manager]
+<img width="1668" height="876" alt="vmware_jtY0R93QZv" src="https://github.com/user-attachments/assets/e561f117-8096-4dbb-bec7-b29b9718a7e9" />
 
 **Verification:**
 ```
 DHCP Panel → IPv4 → Green tick ✅
 Scope [192.168.160.0] SecHomeLab_Scope ✅
 ```
+<img width="1668" height="876" alt="vmware_IGxNQtiTju" src="https://github.com/user-attachments/assets/268116b9-20fc-40ac-bc92-484171c6eeb4" />
 
 ---
 
@@ -493,7 +494,7 @@ Pro version supports:
 7. Selected "Domain join instead"
 8. Created local account: localuser / Admin@12345
 
-[Insert Screenshot: PC01 Windows 10 Pro Desktop]
+<img width="1668" height="876" alt="vmware_2ETchyxhBH" src="https://github.com/user-attachments/assets/a35af947-70b4-4a6b-b61e-5cf042e207a0" />
 
 #### Static IP for PC01
 
@@ -505,7 +506,7 @@ Preferred DNS:   192.168.160.10
 Alternate DNS:   8.8.8.8
 ```
 
-[Insert Screenshot: PC01 Network Configuration]
+<img width="1668" height="876" alt="vmware_QcsXX40L31" src="https://github.com/user-attachments/assets/bfda7a8c-63e6-4407-bc98-e8fd77c72c84" />
 
 #### Joining PC01 to Domain
 
@@ -530,9 +531,9 @@ systeminfo | findstr /B /C:"Domain"
 ```
 Result: `Domain: securecorp.local` ✅
 
-[Insert Screenshot: PC01 whoami showing securecorp\administrator]
+<img width="1668" height="876" alt="vmware_Wajn1NYgBo" src="https://github.com/user-attachments/assets/75f2424a-967c-4c21-bbbf-221ba9e66423" />
 
-[Insert Screenshot: PC01 systeminfo showing Domain: securecorp.local]
+<img width="1106" height="636" alt="3mDd7cz0DU" src="https://github.com/user-attachments/assets/aa1f17d0-b6bd-42a1-9dc0-99805e21f837" />
 
 ### PC02 — Windows 11 Enterprise
 
@@ -549,10 +550,10 @@ Result: `Domain: securecorp.local` ✅
 
 ```
 ARM64 = For Apple Silicon / mobile processors ❌
-x64   = For Intel/AMD processors (your laptop) ✅
+x64   = For Intel/AMD processors (My laptop) ✅
 ```
 
-[Insert Screenshot: PC02 Windows 11 Desktop]
+<img width="1920" height="1020" alt="vmware_lJ6wNirJCE" src="https://github.com/user-attachments/assets/be4c0ef1-4aea-4e91-b6ef-5ce5f9e69a4c" />
 
 #### Static IP for PC02
 
@@ -572,7 +573,7 @@ Same process as PC01:
 3. Used Administrator credentials
 4. Restarted
 
-[Insert Screenshot: PC02 whoami showing securecorp\administrator]
+<img width="1668" height="876" alt="vmware_2ikrmOYDv7" src="https://github.com/user-attachments/assets/ea494d7c-68af-4d0b-83c1-baee7a3203a1" />
 
 ---
 
@@ -628,7 +629,7 @@ Username: socadmin
 Password: Admin@12345
 ```
 
-[Insert Screenshot: Ubuntu Desktop After Installation]
+<img width="1920" height="1020" alt="vmware_yE4LjrlYab" src="https://github.com/user-attachments/assets/c843fa71-d775-43e9-a256-d307da11420f" />
 
 ### Splunk Enterprise Installation
 
@@ -647,7 +648,7 @@ cd ~/Downloads
 sudo dpkg -i splunk-*.deb
 
 # Start Splunk and accept license
-sudo /opt/splunk/bin/splunk start --accept-license
+sudo /opt/splunk/bin/splunk start --accept-license --run-as-root
 
 # Set to start automatically on boot
 sudo /opt/splunk/bin/splunk enable boot-start
@@ -666,9 +667,9 @@ Go to: http://localhost:8000
 Login: admin / Admin@12345
 ```
 
-[Insert Screenshot: Splunk Enterprise Login Page]
+<img width="1920" height="1020" alt="vmware_yrfYM1EIJ5" src="https://github.com/user-attachments/assets/03e72bec-546f-401a-9a4b-7cedb3f98082" />
 
-[Insert Screenshot: Splunk Enterprise Dashboard - Hello Administrator]
+<img width="1920" height="1020" alt="vmware_SncMIy6J4o" src="https://github.com/user-attachments/assets/af9a5954-edb4-4ca4-bdef-f891cf0e4994" />
 
 ### Configure Splunk to Receive Logs
 
@@ -684,7 +685,7 @@ Port 9997 = Standard Splunk receiving port
 All forwarders send logs to this port
 ```
 
-[Insert Screenshot: Splunk Receiving Port 9997 Configuration]
+<img width="1668" height="876" alt="vmware_x1MDsVFtWT" src="https://github.com/user-attachments/assets/cd911acf-c7ae-4be6-9273-bdea3317ea67" />
 
 ### Splunk Universal Forwarder on DC01
 
@@ -748,13 +749,13 @@ sc query SplunkForwarder
 ```
 Result: `STATE: RUNNING` ✅
 
-[Insert Screenshot: SplunkForwarder Service Running on DC01]
+<img width="1668" height="876" alt="vmware_RmTOJi72br" src="https://github.com/user-attachments/assets/7e43965f-cf6c-4777-a322-37850dbda352" />
 
 ### Splunk Universal Forwarder on PC01
 
 Same installation process as DC01 with same inputs.conf file.
 
-[Insert Screenshot: SplunkForwarder Service Running on PC01]
+<img width="1920" height="1020" alt="vmware_JvRKIaEVHt" src="https://github.com/user-attachments/assets/d949f6a3-c033-47d9-846c-af74f35739ca" />
 
 ### Verifying Logs in Splunk
 
@@ -775,9 +776,9 @@ Count by host:
 index=main | stats count by host
 ```
 
-[Insert Screenshot: Splunk Search Showing DC01 Logs]
+<img width="1920" height="1080" alt="10fBROMTzc" src="https://github.com/user-attachments/assets/21a52590-bd4b-44a7-b595-633d54753a8c" />
 
-[Insert Screenshot: Splunk Search Showing Both DC01 and PC01 Hosts]
+<img width="1920" height="1080" alt="0Rl3chiraQ" src="https://github.com/user-attachments/assets/6f203539-da4d-4240-b17a-ee0ffafbc41f" />
 
 ---
 
@@ -839,9 +840,9 @@ sc query sysmon64
 ```
 Result: `STATE: RUNNING` ✅
 
-[Insert Screenshot: Sysmon Installed and Running on DC01]
+<img width="1668" height="876" alt="vmware_nEugKJuwy0" src="https://github.com/user-attachments/assets/0941bdc6-578d-41fc-88be-660ca1d6a42a" />
 
-[Insert Screenshot: Sysmon Events Appearing in Splunk]
+<img width="1668" height="876" alt="vmware_g9zNx23a72" src="https://github.com/user-attachments/assets/9e8b6592-b30f-40c5-a6e3-cdf760cd55df" />
 
 ### Updated inputs.conf with Sysmon
 
@@ -868,7 +869,7 @@ index=main source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
 🔴 Attacker: Kali Linux
 🖥️ Victim:   PC01 (Windows 10 Pro)
 🎥 Monitor:  Splunk on Ubuntu
-🔍 Analyst:  Shahid (You!)
+🔍 Analyst:  Shahid (Me)
 ```
 
 ### Kali Linux Setup
@@ -904,7 +905,7 @@ Scans all common ports on PC01
 Shows what services are running
 ```
 
-[Insert Screenshot: Nmap Scan Running on Kali Linux]
+<img width="1668" height="876" alt="vmware_wOqwL18zL7" src="https://github.com/user-attachments/assets/1e8c65ab-6684-4168-9736-b12bfbd91e7f" />
 
 ### Attack 2 — Brute Force with Hydra
 
@@ -928,7 +929,7 @@ smb://           = Attack Windows file sharing
 Tries thousands of passwords automatically
 ```
 
-[Insert Screenshot: Hydra Brute Force Attack Running]
+<img width="1660" height="229" alt="vmware_gAPyvXP70k" src="https://github.com/user-attachments/assets/ea56b4c9-78a4-4b23-a562-15a2a92cb024" />
 
 ### Detecting Attack in Splunk
 
@@ -958,9 +959,10 @@ LogName:        Security ✅
 Keywords:       Audit Failure ✅
 ```
 
-[Insert Screenshot: EventCode 4625 Detected in Splunk]
+<img width="1668" height="876" alt="vmware_HDaKnnJpZV" src="https://github.com/user-attachments/assets/b85d0c7e-fe09-4a58-9109-745994545bc0" />
+<img width="1668" height="876" alt="vmware_JnWcNhU1Bo" src="https://github.com/user-attachments/assets/dc042033-c3dc-4947-8d49-bb11e5b4b5c1" />
 
-[Insert Screenshot: Full Event Details Showing Attack Evidence]
+<img width="1668" height="876" alt="8BT1Vy08Q0" src="https://github.com/user-attachments/assets/7fe843d6-5457-4435-934e-7f591f0f7f22" />
 
 **Count Failed Login Attempts:**
 ```
@@ -968,8 +970,9 @@ index=main EventCode=4625
 | stats count by Account_Name, host
 | sort -count
 ```
+<img width="1668" height="876" alt="iKKZRNoX6J" src="https://github.com/user-attachments/assets/107587a2-40a0-4faf-b289-f78e33343c02" />
+<img width="1668" height="876" alt="iKKZRNoX6J" src="https://github.com/user-attachments/assets/29e1159d-3a4f-46f1-b005-c8446d72a326" />
 
-[Insert Screenshot: Failed Login Count by Account]
 
 **Build Attack Timeline:**
 ```
@@ -978,7 +981,8 @@ index=main EventCode=4625
 | sort _time
 ```
 
-[Insert Screenshot: Attack Timeline in Splunk]
+<img width="1668" height="876" alt="vmware_Xr62aXBUAj" src="https://github.com/user-attachments/assets/2a15bd62-c203-46f5-b0f0-3473a48d03da" />
+<img width="1668" height="876" alt="2qeNR7CmQV" src="https://github.com/user-attachments/assets/099fd904-d13c-4bd3-8156-4524e161e298" />
 
 ---
 
@@ -1010,7 +1014,7 @@ index=main EventCode=4625
 | timechart span=1h count as "Failed Logins" by host
 ```
 
-[Insert Screenshot: Failed Login Attempts Panel]
+<img width="1668" height="876" alt="vmware_mHbtVOMMQB" src="https://github.com/user-attachments/assets/8337ac5a-33dc-4904-af97-ea3741cd75eb" />
 
 #### Panel 2 — Successful Logins
 ```
@@ -1022,7 +1026,7 @@ index=main EventCode=4624
 | sort -"Login Count"
 ```
 
-[Insert Screenshot: Successful Logins Panel]
+<img width="1339" height="358" alt="vmware_FP0v2YZPKp" src="https://github.com/user-attachments/assets/99cd78cd-3afd-460a-ad65-23c59d63d560" />
 
 #### Panel 3 — New Processes Created
 ```
@@ -1034,7 +1038,7 @@ index=main EventCode=1
 | sort -_time
 ```
 
-[Insert Screenshot: New Processes Panel]
+<img width="1342" height="431" alt="vmware_3DQ4yxUTlq" src="https://github.com/user-attachments/assets/70dcd418-c8ba-4c4f-973d-4e72fd930d5c" />
 
 #### Panel 4 — Network Connections
 ```
@@ -1046,7 +1050,7 @@ index=main EventCode=3
 | sort -_time
 ```
 
-[Insert Screenshot: Network Connections Panel]
+<img width="1332" height="110" alt="vmware_Nfoig90yeJ" src="https://github.com/user-attachments/assets/99bdd05a-98aa-4c86-bb69-feb5dfc0b724" />
 
 #### Panel 5 — Top Targeted Accounts
 ```
@@ -1059,7 +1063,7 @@ index=main EventCode=4625
 | head 10
 ```
 
-[Insert Screenshot: Top Targeted Accounts Panel]
+<img width="1337" height="290" alt="vmware_4k6LoE61cp" src="https://github.com/user-attachments/assets/13e83d75-9803-4872-b2f7-c3f07b2a1547" />
 
 #### Panel 6 — DNS Queries Monitor
 ```
@@ -1071,7 +1075,7 @@ index=main EventCode=22
 | sort -_time
 ```
 
-[Insert Screenshot: DNS Queries Panel]
+<img width="1340" height="462" alt="vmware_6RhYG7ul5N" src="https://github.com/user-attachments/assets/430e1754-d20b-4431-a511-17afa970c033" />
 
 #### Panel 7 — Security Events Timeline
 ```
@@ -1089,7 +1093,7 @@ index=main
 | timechart span=1h count by EventType
 ```
 
-[Insert Screenshot: Security Events Timeline Panel]
+<img width="1332" height="306" alt="vmware_BbjSltpuHs" src="https://github.com/user-attachments/assets/5787d194-65c7-45b9-87d5-83ca6accdac7" />
 
 #### Panel 8 — Critical Security Events
 ```
@@ -1103,11 +1107,10 @@ OR EventCode=4732 OR EventCode=1102)
 | sort -_time
 ```
 
-[Insert Screenshot: Critical Security Events Panel]
 
 ### Full Dashboard View
 
-[Insert Screenshot: Complete SOC Dashboard All 8 Panels Visible]
+<img width="1668" height="876" alt="vmware_hoLog6JAiL" src="https://github.com/user-attachments/assets/6ef7f662-8694-45bb-b90b-76a329aad2b5" />
 
 ### Alert Rules Created
 
