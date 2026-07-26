@@ -1108,9 +1108,6 @@ OR EventCode=4732 OR EventCode=1102)
 ```
 
 
-### Full Dashboard View
-
-<img width="1668" height="876" alt="vmware_hoLog6JAiL" src="https://github.com/user-attachments/assets/6ef7f662-8694-45bb-b90b-76a329aad2b5" />
 
 ### Alert Rules Created
 
@@ -1145,7 +1142,7 @@ Schedule: Real time
 Severity: High
 ```
 
-[Insert Screenshot: Alert Rules List in Splunk]
+<img width="1918" height="876" alt="vmware_WxiRVjuPNc" src="https://github.com/user-attachments/assets/00a85b73-04fd-4061-99cb-8dbf8b4b3021" />
 
 ---
 
@@ -1192,7 +1189,7 @@ Workstation:    PC01
 Source:         WinEventLog:Security
 ```
 
-[Insert Screenshot: Splunk Evidence EventCode 4625]
+<img width="1918" height="876" alt="vmware_MEvUfZjU6r" src="https://github.com/user-attachments/assets/fd5d0fe0-104c-4dbc-8440-43fcb855504e" />
 
 #### 4. Attack Timeline
 
@@ -1247,7 +1244,6 @@ Severity:         High (attempted breach)
    (Minimum 14 characters, complexity required)
 ```
 
-[Insert Screenshot: Full Incident Report Document]
 
 ### Snapshots Taken
 
@@ -1269,7 +1265,7 @@ After done: Restore snapshot
 Lab returns to clean state instantly!
 ```
 
-[Insert Screenshot: VMware Snapshot Manager Showing All Snapshots]
+<img width="762" height="317" alt="vmware_LmkWZZFd8j" src="https://github.com/user-attachments/assets/3c76975f-649f-4bd5-bc65-df157caa7ddd" />
 
 ---
 
